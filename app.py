@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route('/')
 
 def root():
-    return redirect('/exchangerate/None')
+    return render_template ('base.html')
 
 
 @app.route('/exchangerate/<string:ticker>', methods=['POST','GET'])
